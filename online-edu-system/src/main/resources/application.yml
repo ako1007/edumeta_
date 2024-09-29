@@ -1,0 +1,51 @@
+name: Java CI
+
+on: [push, pull_request]  # Запускать на push и pull request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Операционная система для выполнения
+server:
+  port: 8080
+  error:
+    include-message: always
+
+spring:
+  mail:
+    host: smtp.mail.me.com
+    port: 587
+    username: akobir.botirov@icloud.com
+    password: hpdn-uxeh-bkgt-kzkv
+    properties:
+      mail:
+        smtp:
+          auth: true
+          debug: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+  application:
+    name: online-edu-system
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  main:
+    allow-bean-definition-overriding: true
+token:
+  signing:
+    key: 53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855
+
+
