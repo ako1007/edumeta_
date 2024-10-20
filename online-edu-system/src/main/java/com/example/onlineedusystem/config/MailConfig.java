@@ -16,7 +16,7 @@ public class MailConfig {
         mailSender.setHost("smtp.mail.me.com");
         mailSender.setPort(587);
 
-        mailSender.setUsername("akobir.botirov@icloud.com");
+        mailSender.setUsername("***@icloud.com");
         mailSender.setPassword("hpdn-uxeh-bkgt-kzkv");
 
         Properties props = mailSender.getJavaMailProperties();
