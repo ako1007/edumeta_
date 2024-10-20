@@ -14,7 +14,7 @@ spring:
   mail:
     host: smtp.mail.me.com
     port: 587
-    username: akobir.botirov@icloud.com
+    username: ***@icloud.com
     password: hpdn-uxeh-bkgt-kzkv
     properties:
       mail:
